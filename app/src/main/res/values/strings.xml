@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="userID">Test</string>
+    <string name="pin_kod">PIN-KODNI KIRITING</string>
+    <string name="phone_number">Telefon nomerni kiriting</string>
+    <string name="password_number">Parolni kiriting</string>
+    <string name="kirish">Kirish</string>
+    <string name="verify_status1">Tasdiqlash kodi &#160;</string>
+    <string name="verify_status">&#160;ichida sizga jo`natiladi iltimos kuting</string>
+    <string name="verify">Tasdiqlash kodi</string>
+    <string name="logo">Logotip</string>
+</resources>
