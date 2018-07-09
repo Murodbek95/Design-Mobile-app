@@ -1,4 +1,4 @@
-package com.example.dellgaming.myapplication.model;
+package com.example.dellgaming.myapplication.register.model;
 
 
 import com.google.gson.annotations.SerializedName;

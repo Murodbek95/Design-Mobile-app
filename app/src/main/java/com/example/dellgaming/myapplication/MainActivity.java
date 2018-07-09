@@ -1,29 +1,20 @@
 package com.example.dellgaming.myapplication;
 
-        import android.content.ContentValues;
         import android.content.Context;
         import android.content.Intent;
         import android.content.SharedPreferences;
-        import android.support.v4.content.ContextCompat;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.util.Log;
-        import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
-        import android.widget.Toast;
 
         import com.andrognito.pinlockview.IndicatorDots;
-        import com.andrognito.pinlockview.PinLockListener;
         import com.andrognito.pinlockview.PinLockView;
-        import com.example.dellgaming.myapplication.activity.MainPage;
-        import com.example.dellgaming.myapplication.activity.Verifty;
-        import com.example.dellgaming.myapplication.helper.Sqlhandler;
-        import com.example.dellgaming.myapplication.model.SignModel;
-        import com.example.dellgaming.myapplication.model.TokenModel;
-        import com.example.dellgaming.myapplication.response.TokenResponse;
-        import com.example.dellgaming.myapplication.rest.ApiClient;
-        import com.example.dellgaming.myapplication.rest.ApiInterface;
+        import com.example.dellgaming.myapplication.register.model.SignModel;
+        import com.example.dellgaming.myapplication.register.response.TokenResponse;
+        import com.example.dellgaming.myapplication.register.rest.ApiClient;
+        import com.example.dellgaming.myapplication.register.rest.ApiInterface;
         import retrofit2.Call;
         import retrofit2.Callback;
         import retrofit2.Response;
@@ -55,58 +46,14 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref",0);
         String token = pref.getString("token","");
         Log.e("sad",token);
-        if (token.isEmpty()){
-            setContentView(R.layout.activity_main);
-        inputPhone = (EditText) findViewById(R.id.phone);
-        inputPassword = (EditText) findViewById(R.id.password);
-        kirish = (Button) findViewById(R.id.kirish);
-        kirish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String phone = inputPhone.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
-                checkLogin(phone,password);
-            }
 
-
-        });
-                            }else {//if tugadi.
             checkToken(token);
-            Intent tent = new Intent(MainActivity.this,
-                    MainPage.class);
-            startActivity(tent);
-                            }
-                            }
-    private void checkLogin (final String phone, final String password){
-        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<SignModel> call = apiService.AuthSignup(API_KEY, SIG, phone, password);
-        call.enqueue(new Callback<SignModel>() {
-            @Override
-            public void onResponse(Call<SignModel> call, Response<SignModel> response) {
-                Sign=response.body();
-                String matn =Sign.getPhone().getMatn();
-                Log.e("reg_matn",matn);
-                String user_id =Sign.getPhone().getUser_id();
-                Toast.makeText(getApplicationContext(),
-                        "Kirish amalga oshirilmoqda iltimos kuting",
-                        Toast.LENGTH_LONG)
-                        .show();
-                Intent myIntent = new Intent(MainActivity.this,
-                        Verifty.class);
-                myIntent.putExtra("user_id",user_id);
-                startActivity(myIntent);
+//            Intent tent = new Intent(MainActivity.this,
+//                    UserProfile.class);
+//            startActivity(tent);
 
-                Log.e("user_id",user_id);
-            }
-            @Override
-            public void onFailure(Call<SignModel> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),
-                        "Kirish amalga oshirilmadi, Iltimos Internetni tekshiring",
-                        Toast.LENGTH_LONG)
-                        .show();
-            }
-        });
-    }
+                            }
+
 
     private void checkToken (final String token){
         ApiInterface apis = ApiClient.getClient().create(ApiInterface.class);

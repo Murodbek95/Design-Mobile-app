@@ -1,4 +1,4 @@
-package com.example.dellgaming.myapplication.rest;
+package com.example.dellgaming.myapplication.register.rest;
 
 
 import retrofit2.Call;
@@ -6,10 +6,10 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-import com.example.dellgaming.myapplication.model.ErrorResponse;
-import com.example.dellgaming.myapplication.model.SignModel;
+import com.example.dellgaming.myapplication.register.model.ErrorResponse;
+import com.example.dellgaming.myapplication.register.model.SignModel;
 
-import com.example.dellgaming.myapplication.response.TokenResponse;
+import com.example.dellgaming.myapplication.register.response.TokenResponse;
 
 
 public interface ApiInterface {

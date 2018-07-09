@@ -1,4 +1,4 @@
-package com.example.dellgaming.myapplication.rest;
+package com.example.dellgaming.myapplication.register.rest;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

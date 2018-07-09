@@ -1,4 +1,4 @@
-package com.example.dellgaming.myapplication.activity;
+package com.example.dellgaming.myapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
