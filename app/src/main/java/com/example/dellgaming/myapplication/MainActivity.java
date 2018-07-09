@@ -3,14 +3,21 @@ package com.example.dellgaming.myapplication;
         import android.content.Context;
         import android.content.Intent;
         import android.content.SharedPreferences;
+        import android.support.v4.app.Fragment;
+        import android.support.v4.app.FragmentActivity;
+        import android.support.v4.app.FragmentTransaction;
+        import android.support.v7.app.ActionBar;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.util.Log;
+        import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
 
         import com.andrognito.pinlockview.IndicatorDots;
         import com.andrognito.pinlockview.PinLockView;
+        import com.example.dellgaming.myapplication.register.activity.Register;
+        import com.example.dellgaming.myapplication.register.fragment.FormRegister;
         import com.example.dellgaming.myapplication.register.model.SignModel;
         import com.example.dellgaming.myapplication.register.response.TokenResponse;
         import com.example.dellgaming.myapplication.register.rest.ApiClient;
@@ -22,13 +29,10 @@ package com.example.dellgaming.myapplication;
 public class MainActivity extends AppCompatActivity {
 
     private SignModel Sign;
-
+    private ActionBar toolbar;
     private TokenResponse tokenresponse;
-    private Button kirish;
-    private EditText inputPhone;
-    private EditText inputPassword;
-    private PinLockView mPinLockView;
-    private IndicatorDots mIndicatorDots;
+    private Button register;
+
 
 
 
@@ -43,16 +47,33 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        register = (Button) findViewById(R.id.register);
+        register.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                //Registrastiya bosilganda shu activtyga o'tkazish kerak
+                Intent tent = new Intent(MainActivity.this,
+                Register.class);
+                startActivity(tent);
+            }
+        });
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref",0);
         String token = pref.getString("token","");
         Log.e("sad",token);
 
-            checkToken(token);
+
+
 //            Intent tent = new Intent(MainActivity.this,
 //                    UserProfile.class);
 //            startActivity(tent);
 
                             }
+
+
 
 
     private void checkToken (final String token){
@@ -72,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
 
 }

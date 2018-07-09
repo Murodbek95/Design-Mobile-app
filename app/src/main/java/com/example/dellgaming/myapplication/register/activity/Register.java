@@ -3,6 +3,7 @@ package com.example.dellgaming.myapplication.register.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -23,12 +24,12 @@ import retrofit2.Response;
 
 /**
  * Created by Otabek on 09.07.2018.
- * Registiratsuyadan o'tish uchun uchun
+ * Registiratsiyadan o'tish uchun
  */
 
 
 
-public class Register extends AppCompatActivity{
+public class Register extends FragmentActivity{
 
 
     private SignModel Sign;
@@ -41,53 +42,27 @@ public class Register extends AppCompatActivity{
     private String SIG = "98b3b38cf27ea990d86e448a69c936c2";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        setContentView(R.layout.activity_register);
 
-        inputPhone = (EditText) findViewById(R.id.phone);
-        inputPassword = (EditText) findViewById(R.id.password);
-        kirish = (Button) findViewById(R.id.kirish);
-        kirish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String phone = inputPhone.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
-                checkLogin(phone,password);
-            }
-
-
-        });
+//
+//        inputPhone = (EditText) findViewById(R.id.phone);
+//        inputPassword = (EditText) findViewById(R.id.password);
+//        kirish = (Button) findViewById(R.id.kirish);
+//        kirish.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String phone = inputPhone.getText().toString().trim();
+//                String password = inputPassword.getText().toString().trim();
+//                checkLogin(phone,password);
+//            }
+//
+//
+//        });
 
 
     }
 
 
-    private void checkLogin (final String phone, final String password){
-        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<SignModel> call = apiService.AuthSignup(API_KEY, SIG, phone, password);
-        call.enqueue(new Callback<SignModel>() {
-            @Override
-            public void onResponse(Call<SignModel> call, Response<SignModel> response) {
-                Sign=response.body();
-                String matn =Sign.getPhone().getMatn();
-                Log.e("reg_matn",matn);
-                String user_id =Sign.getPhone().getUser_id();
-                Toast.makeText(getApplicationContext(),
-                        "Kirish amalga oshirilmoqda iltimos kuting",
-                        Toast.LENGTH_LONG)
-                        .show();
-
-
-                Log.e("user_id",user_id);
-            }
-            @Override
-            public void onFailure(Call<SignModel> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),
-                        "Kirish amalga oshirilmadi, Iltimos Internetni tekshiring",
-                        Toast.LENGTH_LONG)
-                        .show();
-            }
-        });
-    }
 }
 

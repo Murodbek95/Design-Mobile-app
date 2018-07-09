@@ -2,68 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/layer_3"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="10dp"
-    android:weightSum="1">
+>
 
-    <TextView
-        android:id="@+id/phone_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/phone_number"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/white"
 
-        android:layout_alignStart="@+id/phone"
-        android:layout_alignEnd="@+id/phone" />
-
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="23dp"
-        android:background="@drawable/kod"
-        android:gravity="center"
-        android:inputType="textEmailAddress"
-        android:layout_below="@+id/phone_number"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/password_number"
-        android:textColor="@color/white"
-        android:layout_below="@+id/phone"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:inputType="textPassword"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:background="@drawable/kod"/>
 
     <Button
-        android:id="@+id/kirish"
-        android:layout_width="wrap_content"
-        android:layout_height="80px"
-        android:layout_alignEnd="@+id/password"
-        android:layout_alignStart="@+id/password"
-        android:layout_below="@+id/password"
-        android:layout_marginTop="23dp"
-        android:background="@drawable/kirish"
-        android:elevation="0dp"
-        android:text="@string/kirish" />
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/register"/>
 
 </RelativeLayout>
