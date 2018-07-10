@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(tent);
             }
         });
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref",0);
-        String token = pref.getString("token","");
-        Log.e("sad",token);
+//        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref",0);
+//        String token = pref.getString("token","");
+//        Log.e("sad",token);
 
 
 
@@ -76,23 +76,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void checkToken (final String token){
-        ApiInterface apis = ApiClient.getClient().create(ApiInterface.class);
-        Call<TokenResponse> tokencall = apis.CheckToken(API_KEY,token);
-        tokencall.enqueue(new Callback<TokenResponse>() {
-            @Override
-            public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
-                tokenresponse=response.body();
-                String userid1 = tokenresponse.getToken().getUserInfo().getId();
-                Log.e("Userni Idisi",userid1);
-            }
-            @Override
-            public void onFailure(Call<TokenResponse> call, Throwable t) {
-
-            }
-        });
-
-    }
+//    private void checkToken (final String token){
+//        ApiInterface apis = ApiClient.getClient().create(ApiInterface.class);
+//        Call<TokenResponse> tokencall = apis.CheckToken(API_KEY,token);
+//        tokencall.enqueue(new Callback<TokenResponse>() {
+//            @Override
+//            public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
+//                tokenresponse=response.body();
+//                String userid1 = tokenresponse.getToken().getUserInfo().getId();
+//                Log.e("Userni Idisi",userid1);
+//            }
+//            @Override
+//            public void onFailure(Call<TokenResponse> call, Throwable t) {
+//
+//            }
+//        });
+//
+//    }
 
 
 
