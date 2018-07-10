@@ -71,10 +71,7 @@ public class FormRegister extends Fragment {
                         SharedPreferences pref = getActivity().getSharedPreferences("UserId",0);
                         String user_id = pref.getString("user_id","");
                         String sms = inputSmscode.getText().toString().trim();
-
                         checkSmsCode(user_id,sms);
-
-
                     }
                     });
             }
@@ -111,7 +108,9 @@ public class FormRegister extends Fragment {
             }
             @Override
             public void onFailure(Call<SignModel> call, Throwable t) {
+                String asd = getActivity().getResources().getString(R.string.interner_error);
 
+                Toast.makeText(getActivity(),asd,Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -125,21 +124,45 @@ public class FormRegister extends Fragment {
             @Override
             public void onResponse(Call<ErrorResponse> call, Response<ErrorResponse> response) {
                 Errorm=response.body();
-                String javob= Errorm.getTokenResponse().getToken();
-                Log.e("Natija:", javob);
-                SharedPreferences pref = getActivity().getSharedPreferences("MyPref",0);
-                SharedPreferences.Editor editor = pref.edit();
-                editor.putString("token",javob);
-                editor.apply();
-                String token = pref.getString("token","");
+                if (response.isSuccessful()){
+                    String javob= Errorm.getTokenResponse().getToken();
+                    Log.e("Natija:", javob);
+                    SharedPreferences pref = getActivity().getSharedPreferences("MyPref",0);
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("token",javob);
+                    editor.apply();
+                    Intent myintent;
+                    myintent = new Intent(getActivity(), UserProfile.class);
 
-                Intent myintent;
-                myintent = new Intent(getActivity(), UserProfile.class);
-                myintent.putExtra("token",token);
-                startActivity(myintent);
+                    String token = pref.getString("token","");
+                    myintent.putExtra("token",token);
+                    startActivity(myintent);
+                }else {
+                    String xato_code =Errorm.getError().getErrorc();
+                    Log.e("xato kodi",xato_code);
+                    String xato= Errorm.getError().getError_msg();
+                    Log.e("Xato:", xato);
+                    SharedPreferences pref = getActivity().getSharedPreferences("MyPref",0);
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("Xato",xato);
+                    editor.apply();
+                }
+
+
+
+                SharedPreferences pref = getActivity().getSharedPreferences("MyPref",0);
+                String token = pref.getString("token","");
+                String xato = pref.getString("Xato","");
+
+                Log.e("adss",token);
+                Log.e("sadasd",xato);
+
+
             }
             @Override
             public void onFailure(Call<ErrorResponse> call, Throwable t) {
+                String asd = getActivity().getResources().getString(R.string.interner_error);
+                Toast.makeText(getActivity(),asd,Toast.LENGTH_SHORT).show();
             }
         });
     }

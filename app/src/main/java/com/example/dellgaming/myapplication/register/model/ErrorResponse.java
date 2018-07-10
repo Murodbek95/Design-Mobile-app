@@ -7,9 +7,9 @@ public class ErrorResponse {
     @SerializedName("error")
     private ErrorModel error;
     @SerializedName("response")
-    private ErrorModel response;
+    private ResponseModel response;
 
-    public ErrorModel getXato() {return error;}
-    public ErrorModel getTokenResponse() {return response;}
+    public ErrorModel getError() {return error;}
+    public ResponseModel getTokenResponse() {return response;}
 }
 

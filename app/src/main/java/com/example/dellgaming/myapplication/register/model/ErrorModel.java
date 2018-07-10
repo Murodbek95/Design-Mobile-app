@@ -11,7 +11,6 @@ public class ErrorModel {
     @SerializedName("auth_token")
     private String auth_token;
 
-
     public String getError_msg() {return error_msg;}
     public String getErrorc() {return error_code;}
     public String getToken() {return auth_token;}
