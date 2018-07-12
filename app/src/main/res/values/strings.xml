@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Universal mobile</string>
     <string name="userID">Test</string>
     <string name="pin_kod">PIN-KODNI KIRITING</string>
     <string name="phone_number">Telefon nomerni kiriting</string>
@@ -11,5 +11,12 @@
     <string name="logo">Logotip</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Bu yerda Universal bank haqida</string>
+    <string name="title_activity_offline">offline</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Universal Bank</string>
+    <string name="nav_header_subtitle">Universalbank.uz</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Sozlamalar</string>
 </resources>

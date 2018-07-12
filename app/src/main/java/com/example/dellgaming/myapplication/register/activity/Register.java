@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.dellgaming.myapplication.MainActivity;
+import com.example.dellgaming.myapplication.offline;
 import com.example.dellgaming.myapplication.R;
 import com.example.dellgaming.myapplication.register.model.SignModel;
 import com.example.dellgaming.myapplication.register.response.TokenResponse;

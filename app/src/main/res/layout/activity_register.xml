@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/layer_3"
-    >
+    android:orientation="vertical">
 
     <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.example.dellgaming.myapplication.register.fragment.FormRegister"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="com.example.dellgaming.myapplication.register.fragment.logo"
-        android:layout="@layout/fragment_register_logo"
-        android:id="@+id/fragment_logo"
-        />
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_form_register" />
 
-    <fragment
-    android:name="com.example.dellgaming.myapplication.register.fragment.FormRegister"
-    android:id="@+id/fragment_register"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    tools:layout="@layout/fragment_form_register" />
-    
 </LinearLayout>
