@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -16,7 +17,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.example.dellgaming.myapplication.CreditPackage.extra.branches_map;
+import com.example.dellgaming.myapplication.CreditPackage.extra.contacts;
+import com.example.dellgaming.myapplication.CreditPackage.extra.faq;
+import com.example.dellgaming.myapplication.CreditPackage.kredit;
+import com.example.dellgaming.myapplication.CreditPackage.omonat;
+import com.example.dellgaming.myapplication.CreditPackage.otqizmalar;
+import com.example.dellgaming.myapplication.CreditPackage.plastik;
+import com.example.dellgaming.myapplication.CreditPackage.valyutaOperatsiya;
 import com.example.dellgaming.myapplication.register.activity.Register;
 import com.example.dellgaming.myapplication.register.model.SignModel;
 import com.example.dellgaming.myapplication.register.response.TokenResponse;
@@ -27,7 +37,7 @@ public class offline extends AppCompatActivity
     private SignModel Sign;
     private ActionBar toolbar;
     private TokenResponse tokenresponse;
-    public Button register;
+    public ImageButton register;
 
 
     private final static String API_KEY = "e315ce3850142a73a684b03aac892ae3";
@@ -43,7 +53,7 @@ public class offline extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         // Registratsiya activityga otish
-        register = (Button) findViewById(R.id.register);
+        register = (ImageButton) findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -120,16 +130,69 @@ public class offline extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+//            kredit newFragment = new kredit();
+////            final kredit f = new kredit();
+////            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,f).commit();
+////            // Handle the camera action
+//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//
+//            // Replace whatever is in the fragment_container view with this fragment,
+//            // and add the transaction to the back stack so the user can navigate back
+//            transaction.replace(R.id.fragment_container, newFragment);
+//           // transaction.addToBackStack(null);
+//
+//            // Commit the transaction
+//            transaction.commit();
+            omonat fragment = new omonat();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
         } else if (id == R.id.nav_gallery) {
 
+            kredit fragment = new kredit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
         } else if (id == R.id.nav_slideshow) {
+            plastik fragment = new plastik();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
 
         } else if (id == R.id.nav_manage) {
+            otqizmalar fragment = new otqizmalar();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
 
         } else if (id == R.id.nav_share) {
+            valyutaOperatsiya fragment = new valyutaOperatsiya();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_share) {
+            contacts fragment = new contacts();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
+        }
+        else if (id == R.id.nav_send) {
+            branches_map fragment = new branches_map();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
+        }
+        else if (id == R.id.nav_faq) {
+            faq fragment = new faq();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
 
         }
 

@@ -51,7 +51,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="paddingPercent" value="-5" />
+                                                <entry key="paddingPercent" value="-10" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -63,7 +63,7 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="cropped" value="true" />
-                                      <entry key="imageAsset" value="C:\Users\Dell Gaming\Pictures\innovation department.png" />
+                                      <entry key="imageAsset" value="C:\Users\Dell Gaming\Pictures\03.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
