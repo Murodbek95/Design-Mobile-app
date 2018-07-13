@@ -168,7 +168,7 @@ public class offline extends AppCompatActivity
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_operation) {
             valyutaOperatsiya fragment = new valyutaOperatsiya();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment);

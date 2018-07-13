@@ -28,13 +28,42 @@
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
 
 
+    <!-- Base application theme. -->
+    <style name="MainTitle">
 
+    </style>
 
-        <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-            <item name="android:windowBackground">@drawable/background_splash</item>
-        </style>
+    <style name="MainText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FF040110</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:fontFamily"></item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MainUpload">
+
+    </style>
+
+    <style name="MainDownload">
+
+    </style>
+    <style name="MainButton">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/roundedbuttons</item>
+        <item name="android:radius">5dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+
+    </style>
 
 
 </resources>
