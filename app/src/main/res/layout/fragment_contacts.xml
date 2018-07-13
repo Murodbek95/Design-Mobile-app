@@ -5,10 +5,214 @@
     android:layout_height="match_parent"
     tools:context=".CreditPackage.extra.contacts">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Contaktlar" />
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/MainTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/umumiy_margin"
+            android:text="Contacts" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Toshkent Filialii" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_question_answer_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+
+                        style="@style/MainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Toshkent Filialii" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_question_answer_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+
+                        style="@style/MainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Toshkent Filialii" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_question_answer_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Toshkent Filialii" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_question_answer_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Toshkent Filialii" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_question_answer_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Toshkent Filialii" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:background="#00ffffff"
+                        android:src="@drawable/ic_question_answer_black_24dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
 
 </FrameLayout>

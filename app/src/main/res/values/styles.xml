@@ -35,7 +35,12 @@
 
     <!-- Base application theme. -->
     <style name="MainTitle">
-
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#1a0d50</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:fontFamily"></item>
     </style>
 
     <style name="MainText">
@@ -55,6 +60,7 @@
     <style name="MainDownload">
 
     </style>
+
     <style name="MainButton">
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
