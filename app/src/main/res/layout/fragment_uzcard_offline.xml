@@ -188,20 +188,22 @@
                     android:layout_width="194dp"
                     android:layout_gravity="center">
 
+                    <TextView
+                        style="@style/MainText"
+                        android:gravity="right"
+                        android:text="Ishlaysizmi?" />
 
-                    <Switch
+                    <CheckBox
                         android:id="@+id/work_info"
                         android:layout_width="138dp"
                         android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="Ishlaysizmi?" />
+                        android:layout_column="1" />
 
                 </TableRow>
             </TableLayout>
 
             <TableLayout
+                android:id="@+id/work_panel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -250,47 +252,58 @@
                 </TableRow>
 
 
-                <TableRow>
-
-                    <TextView
-                        style="@style/MainText"
-                        android:text="Pasport Kopiya" />
-
-                    <Button android:text="Upload image" />
-
-
-                </TableRow>
-
-                <TableRow>
-
-                    <CheckBox android:text="I am agree " />
-
-                    <TextView
-
-                        android:text="Agreement" />
-
-
-                </TableRow>
-
-                <TableRow>
-
-
-
-
-                </TableRow>
-
             </TableLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:orientation="vertical"
                 android:layout_marginBottom="30dp"
                 android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pasport Kopiya"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload image"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I am agree " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agreement" />
+                </LinearLayout>
+
+
                 <Button
                     style="@style/MainButton"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="Jonatish" />
             </LinearLayout>
 

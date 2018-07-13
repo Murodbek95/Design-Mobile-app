@@ -6,7 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.Switch;
+import android.widget.TableLayout;
+import android.widget.Toast;
 
 import com.example.dellgaming.myapplication.R;
 
@@ -27,17 +30,27 @@ public class UzcardOfflineFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_uzcard_offline, container, false);
 
-        Switch job_info = (Switch) rootView.findViewById(R.id.work_info);
+       final CheckBox checkboxvariable = (CheckBox) rootView.findViewById(R.id.work_info);
+       final TableLayout tableLayout = (TableLayout)rootView.findViewById(R.id.work_panel);
+        tableLayout.setVisibility(View.GONE);;
+        checkboxvariable.setOnClickListener(new View.OnClickListener() {
 
-        Boolean switchState = job_info.isChecked();
+            @Override
+            public void onClick(View v) {
 
-        if(job_info.isChecked())
-        {
 
-        }
+                if (checkboxvariable.isChecked()) {
+                    tableLayout.setVisibility(View.VISIBLE);
+                } else {
+                    tableLayout.setVisibility(View.GONE);
+                }
+
+            }
+        });
+
         return rootView;
-    }
 
+    }
 
 
 }
