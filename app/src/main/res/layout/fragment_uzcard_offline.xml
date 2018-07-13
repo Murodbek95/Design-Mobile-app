@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".applications.UzcardOfflineFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_gravity="center"
+                        android:layout_span="3"
+                        android:text="Open Uz car application"
+                        android:textSize="20dp" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Isimingiz" />
+
+                    <EditText
+                        android:layout_column="1"
+                        android:hint="Ismingizni kiriting"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Familyangiz" />
+
+                    <EditText
+                        android:layout_column="1"
+                        android:hint="Familyangizni kiriting"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Otangiz ismi" />
+
+                    <EditText
+                        android:layout_column="1"
+                        android:hint="Otangiz ismini kiriting"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Tugilgan Kuningiz" />
+
+                    <EditText
+                        android:layout_column="1"
+                        android:hint="30/12/1990"
+                        android:inputType="datetime"
+                        android:maxDate="2002"
+                        android:minDate="1900"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Tugilgan Joyingiz" />
+
+                    <EditText
+                        android:layout_column="1"
+                        android:hint="Address propiske kirit"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Passport ID" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="9">
+
+                        <EditText
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:hint="AA" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="1234567" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Kim tominidan Berilgan" />
+
+                    <EditText
+                        android:layout_column="1"
+                        android:hint="Namangan IIB"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Kogda Vidan" />
+
+                    <EditText
+                        android:layout_column="1"
+                        android:hint="30/12/2016"
+                        android:inputType="date"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Telefon raqami" />
+
+                    <EditText
+                        android:id="@+id/editText12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="+998(XX)123 45 67"
+                        android:inputType="phone" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Email" />
+
+                    <EditText
+                        android:id="@+id/editText13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="someone@somecompany.uz"
+                        android:inputType="textEmailAddress" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="194dp"
+                    android:layout_gravity="center">
+
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Ishlaysizmi?" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Mesta rabota" />
+
+                    <EditText android:hint="Ish joyi" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Adress organization" />
+
+                    <EditText android:hint="Ish joyi" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Doljnost" />
+
+                    <EditText android:hint="Ish joyi" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Ish Telefon raqami" />
+
+                    <EditText
+                        android:id="@+id/editText112"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="+998(XX)123 45 67"
+                        android:inputType="phone" />
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MainText"
+                        android:text="Pasport Kopiya" />
+
+                    <Button android:text="Upload image" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox android:text="I am agree " />
+
+                    <TextView
+
+                        android:text="Agreement" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+
+
+
+                </TableRow>
+
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jonatish" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>
