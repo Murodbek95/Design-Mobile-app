@@ -16,17 +16,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.example.dellgaming.myapplication.CreditPackage.extra.branches_map;
-import com.example.dellgaming.myapplication.CreditPackage.extra.contacts;
-import com.example.dellgaming.myapplication.CreditPackage.extra.faq;
+import com.example.dellgaming.myapplication.SettingsPackage.SettingsMainFragment;
+import com.example.dellgaming.myapplication.extra.branches_map;
+import com.example.dellgaming.myapplication.extra.contacts;
+import com.example.dellgaming.myapplication.extra.faq;
 import com.example.dellgaming.myapplication.CreditPackage.kredit;
-import com.example.dellgaming.myapplication.CreditPackage.omonat;
-import com.example.dellgaming.myapplication.CreditPackage.otqizmalar;
-import com.example.dellgaming.myapplication.CreditPackage.plastik;
-import com.example.dellgaming.myapplication.CreditPackage.valyutaOperatsiya;
+import com.example.dellgaming.myapplication.OmonatPackage.omonat;
+import com.example.dellgaming.myapplication.ExchangeMoney.otqizmalar;
+import com.example.dellgaming.myapplication.creditcard.plastik;
+import com.example.dellgaming.myapplication.MoneyOperation.valyutaOperatsiya;
 import com.example.dellgaming.myapplication.register.activity.Register;
 import com.example.dellgaming.myapplication.register.model.SignModel;
 import com.example.dellgaming.myapplication.register.response.TokenResponse;
@@ -117,6 +117,9 @@ public class offline extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+//            Intent myIntent = new Intent(offline.this, SettingsActivity.class);
+////            myIntent.putExtra("key", value); //Optional parameters
+//            offline.this.startActivity(myIntent);
             return true;
         }
 
@@ -190,6 +193,35 @@ public class offline extends AppCompatActivity
         }
         else if (id == R.id.nav_faq) {
             faq fragment = new faq();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
+        }
+
+        else if (id == R.id.nav_settings) {
+            SettingsMainFragment fragment = new SettingsMainFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
+        }
+        else if (id == R.id.nav_share_app) {
+            try {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                String sAux = "\nLet me recommend you this application\n\n";
+                sAux = sAux + "https:universalbank.uz\n\n";
+                i.putExtra(Intent.EXTRA_TEXT, sAux);
+                startActivity(Intent.createChooser(i, "choose one"));
+            } catch(Exception e) {
+                //e.toString();
+            }
+
+        }
+        else if (id == R.id.nav_home) {
+            SettingsMainFragment fragment = new SettingsMainFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();

@@ -1,4 +1,4 @@
-package com.example.dellgaming.myapplication.CreditPackage;
+package com.example.dellgaming.myapplication.extra;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.example.dellgaming.myapplication.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class otqizmalar extends Fragment {
+public class contacts extends Fragment {
 
 
-    public otqizmalar() {
+    public contacts() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class otqizmalar extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_otqizmalar, container, false);
+        return inflater.inflate(R.layout.fragment_contacts, container, false);
     }
 
 }

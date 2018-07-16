@@ -1,4 +1,4 @@
-package com.example.dellgaming.myapplication.CreditPackage.extra;
+package com.example.dellgaming.myapplication.extra;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.example.dellgaming.myapplication.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class branches_map extends Fragment {
+public class faq extends Fragment {
 
 
-    public branches_map() {
+    public faq() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class branches_map extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_branches_map, container, false);
+        return inflater.inflate(R.layout.fragment_faq, container, false);
     }
 
 }

@@ -5,6 +5,11 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="Вклады" />
+
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Вклады" />
@@ -30,6 +35,11 @@
     <item android:title="Полезние">
         <menu>
             <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_applications_black_24dp"
+
+                android:title="Настройка" />
+            <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_phone_in_talk_black_24dp"
                 android:title="Контакты" />
@@ -43,6 +53,12 @@
                 android:icon="@drawable/ic_question_answer_black_24dp"
 
                 android:title="FAQ" />
+
+            <item
+                android:id="@+id/nav_share_app"
+                android:icon="@drawable/ic_menu_share"
+
+                android:title="Share" />
         </menu>
     </item>
 
