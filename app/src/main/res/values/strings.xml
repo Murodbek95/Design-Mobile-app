@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Universal mobile</string>
+    <string name="app_name">Universal Mobile</string>
     <string name="userID">Test</string>
     <string name="pin_kod">PIN-KODNI KIRITING</string>
     <string name="phone_number">Telefon nomerni kiriting</string>
@@ -18,8 +18,8 @@
     <string name="nav_header_title">Universal Bank</string>
     <string name="nav_header_subtitle">Universalbank.uz</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Sozlamalar</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="action_settings">Настройка</string>
+    <string name="title_activity_settings">Настройка</string>
 
     <!-- Strings related to Settings -->
 

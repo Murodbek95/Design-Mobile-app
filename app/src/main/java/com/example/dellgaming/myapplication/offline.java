@@ -17,8 +17,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
-import com.example.dellgaming.myapplication.SettingsPackage.SettingsMainFragment;
+import com.example.dellgaming.myapplication.SettingsPackage.SettingsFragment;
+import com.example.dellgaming.myapplication.extra.AboutBankFragment;
 import com.example.dellgaming.myapplication.extra.branches_map;
 import com.example.dellgaming.myapplication.extra.contacts;
 import com.example.dellgaming.myapplication.extra.faq;
@@ -38,6 +41,7 @@ public class offline extends AppCompatActivity
     private ActionBar toolbar;
     private TokenResponse tokenresponse;
     public ImageButton register;
+    private LinearLayout logo, logotext;
 
 
     private final static String API_KEY = "e315ce3850142a73a684b03aac892ae3";
@@ -66,11 +70,24 @@ public class offline extends AppCompatActivity
             }
         });
 
-
+//        ImageView imageViewed = (ImageView)findViewById(R.id.imageView);
         //        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref",0);
 //        String token = pref.getString("token","");
 //        Log.e("sad",token);
 
+//        LinearLayout logo = (LinearLayout) findViewById(R.id.offline_logo);
+////        LinearLayout logotext = (LinearLayout)findViewById(R.id.offline_logo_text);
+//        imageViewed.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AboutBankFragment fragment = new AboutBankFragment();
+//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                transaction.replace(R.id.fragment_container, fragment);
+//                transaction.commit();
+//            }
+//        });
+//        View headerView = navigationView.inflateHeaderView(R.layout.navigation_header);
+//        headerView.findViewById(R.id.navigation_header_text);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -183,30 +200,28 @@ public class offline extends AppCompatActivity
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();
 
-        }
-        else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_send) {
             branches_map fragment = new branches_map();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();
 
-        }
-        else if (id == R.id.nav_faq) {
+        } else if (id == R.id.nav_faq) {
             faq fragment = new faq();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();
 
-        }
-
-        else if (id == R.id.nav_settings) {
-            SettingsMainFragment fragment = new SettingsMainFragment();
+        } else if (id == R.id.nav_settings) {
+//            Intent myIntent = new Intent(offline.this, SettingsActivity.class);
+//////            myIntent.putExtra("key", value); //Optional parameters
+//            offline.this.startActivity(myIntent);
+            SettingsFragment fragment = new SettingsFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();
 
-        }
-        else if (id == R.id.nav_share_app) {
+        } else if (id == R.id.nav_share_app) {
             try {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
@@ -215,13 +230,12 @@ public class offline extends AppCompatActivity
                 sAux = sAux + "https:universalbank.uz\n\n";
                 i.putExtra(Intent.EXTRA_TEXT, sAux);
                 startActivity(Intent.createChooser(i, "choose one"));
-            } catch(Exception e) {
+            } catch (Exception e) {
                 //e.toString();
             }
 
-        }
-        else if (id == R.id.nav_home) {
-            SettingsMainFragment fragment = new SettingsMainFragment();
+        } else if (id == R.id.nav_home) {
+            OfflineHomeFragment fragment = new OfflineHomeFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();
