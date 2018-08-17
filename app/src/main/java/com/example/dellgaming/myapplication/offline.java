@@ -1,12 +1,16 @@
 package com.example.dellgaming.myapplication;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -22,6 +26,7 @@ import android.widget.LinearLayout;
 
 import com.example.dellgaming.myapplication.SettingsPackage.SettingsFragment;
 import com.example.dellgaming.myapplication.extra.AboutBankFragment;
+import com.example.dellgaming.myapplication.extra.CHatFragment;
 import com.example.dellgaming.myapplication.extra.branches_map;
 import com.example.dellgaming.myapplication.extra.contacts;
 import com.example.dellgaming.myapplication.extra.faq;
@@ -42,6 +47,7 @@ public class offline extends AppCompatActivity
     private TokenResponse tokenresponse;
     public ImageButton register;
     private LinearLayout logo, logotext;
+    boolean flag = true; // true if first icon is visible, false if second one is visible.
 
 
     private final static String API_KEY = "e315ce3850142a73a684b03aac892ae3";
@@ -55,6 +61,10 @@ public class offline extends AppCompatActivity
         setContentView(R.layout.activity_offline);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        OfflineHomeFragment fragment = new OfflineHomeFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
 
         // Registratsiya activityga otish
         register = (ImageButton) findViewById(R.id.register);
@@ -89,12 +99,33 @@ public class offline extends AppCompatActivity
 //        View headerView = navigationView.inflateHeaderView(R.layout.navigation_header);
 //        headerView.findViewById(R.id.navigation_header_text);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Chat va qongiroq qilish funksiyasi", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                flag = true;
+                if(flag == true){
+                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_send_white_24dp));
+                    CHatFragment fragment = new CHatFragment();
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+                    transaction.replace(R.id.fragment_container, fragment);
+                    transaction.commit();
+
+                }
+
+//                else if(flag == false){
+//
+//                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.icon1));
+//                    flag = true;
+//
+//                }
+
+
+
+
+//                Snackbar.make(view, "Chat va qongiroq qilish funksiyasi", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
             }
         });
 
@@ -150,21 +181,14 @@ public class offline extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-//            kredit newFragment = new kredit();
-////            final kredit f = new kredit();
-////            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,f).commit();
-////            // Handle the camera action
-//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//
-//            // Replace whatever is in the fragment_container view with this fragment,
-//            // and add the transaction to the back stack so the user can navigate back
-//            transaction.replace(R.id.fragment_container, newFragment);
-//           // transaction.addToBackStack(null);
-//
-//            // Commit the transaction
-//            transaction.commit();
+
+
+
+
             omonat fragment = new omonat();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                    android.R.anim.slide_out_right);
             transaction.replace(R.id.fragment_container, fragment);
             transaction.commit();
 
@@ -242,6 +266,9 @@ public class offline extends AppCompatActivity
 
         }
 
+
+
+        
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

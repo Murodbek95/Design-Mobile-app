@@ -11,4 +11,5 @@
 
     <!--Bu yerdan Universal bank stillari boshlanadi-->
     <dimen name="umumiy_margin">20dp</dimen>
+    <dimen name="umumiy_padding">10dp</dimen>
 </resources>
