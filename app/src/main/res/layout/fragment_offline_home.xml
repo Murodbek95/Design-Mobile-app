@@ -1,14 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
     tools:context=".OfflineHomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@drawable/main_banner"
+        android:gravity="top|start"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="-10dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        tools:context=".OfflineHomeFragment">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="284dp"
+                android:layout_height="118dp"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="0dp"
+                android:src="@drawable/slogan" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/umumiy_margin"
+        android:layout_marginRight="@dimen/umumiy_margin"
+        android:layout_marginTop="@dimen/umumiy_margin"
+        android:layout_weight="1"
+        android:background="@color/colorRed"
+        android:gravity="center"
+        android:text="REGISTRATION" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="20">
+
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_margin="@dimen/umumiy_padding"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:elevation="@dimen/umumiy_padding"
+        android:padding="@dimen/umumiy_padding">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/umumiy_padding"
+            android:layout_rowWeight="1"
+            android:background="@drawable/elevation_effect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/umumiy_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_in_talk_black_24dp" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit" />
+        </LinearLayout>
+
+
+    </GridLayout>
+
+
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="48dp">
+    </LinearLayout>
+</LinearLayout>
+
