@@ -26,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.dellgaming.myapplication.SettingsPackage.SettingsFragment;
+import com.example.dellgaming.myapplication.applications.UzcardOfflineFragment;
 import com.example.dellgaming.myapplication.extra.AboutBankFragment;
 import com.example.dellgaming.myapplication.extra.CHatFragment;
 import com.example.dellgaming.myapplication.extra.branches_map;
@@ -51,7 +52,7 @@ public class offline extends AppCompatActivity
     private LinearLayout logo, logotext;
     boolean flag = true; // true if first icon is visible, false if second one is visible.
 
-    private Button regcard;
+
 
     private final static String API_KEY = "e315ce3850142a73a684b03aac892ae3";
     private String SIG = "98b3b38cf27ea990d86e448a69c936c2";
@@ -69,18 +70,6 @@ public class offline extends AppCompatActivity
         transaction.replace(R.id.fragment_container, fragment);
         transaction.commit();
 
-         regcard = (Button)findViewById(R.id.card_register);
-        regcard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CardRegister fragment = new CardRegister();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
-                transaction.replace(R.id.fragment_container, fragment);
-                transaction.commit();
-
-            }
-        });
 
 
         // Registratsiya activityga otish
@@ -96,6 +85,8 @@ public class offline extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+
 
 //        ImageView imageViewed = (ImageView)findViewById(R.id.imageView);
         //        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref",0);
