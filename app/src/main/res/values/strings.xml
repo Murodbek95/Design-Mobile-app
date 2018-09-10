@@ -96,8 +96,10 @@
 
     <string name="prompt_card_number">Karta raqamini kiriting</string>
     <string name="prompt_expire_date">oy/yil</string>
+    <string name="prompt_sms_pass">Parol</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Registratsiya</string>
     <string name="action_sign_in_short">Sign in, short</string>
     <string name="error_field_required">Majburiy maydon</string>
+    <string name="title_activity_user_profile_online">UserProfileOnline</string>
 </resources>

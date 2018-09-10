@@ -56,7 +56,11 @@
         </activity>
         <activity
             android:name=".SettingsPackage.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".UserProfileOnline"
+            android:label="@string/title_activity_user_profile_online"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
