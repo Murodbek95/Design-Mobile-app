@@ -33,6 +33,7 @@ public class CardRegister extends Fragment {
 //                Intent intent = new Intent(offline.this,
 //                        CardRegisterAct.class);
 //                startActivity(intent);
+                System.out.println("checkline button");
                 BlankFragment fragment = new BlankFragment();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
