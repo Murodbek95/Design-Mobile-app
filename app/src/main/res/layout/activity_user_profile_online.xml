@@ -23,3 +23,5 @@
         app:menu="@menu/activity_user_profile_online_drawer" />
 
 </android.support.v4.widget.DrawerLayout>
+
+

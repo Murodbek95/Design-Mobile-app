@@ -1,8 +1,11 @@
 package com.example.dellgaming.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,22 +16,64 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.dellgaming.myapplication.CreditPackage.kredit;
+import com.example.dellgaming.myapplication.ExchangeMoney.otqizmalar;
+import com.example.dellgaming.myapplication.MoneyOperation.valyutaOperatsiya;
+import com.example.dellgaming.myapplication.OmonatPackage.omonat;
+import com.example.dellgaming.myapplication.SettingsPackage.SettingsActivity;
+import com.example.dellgaming.myapplication.creditcard.plastik;
+import com.example.dellgaming.myapplication.extra.CHatFragment;
+import com.example.dellgaming.myapplication.extra.branches_map;
+import com.example.dellgaming.myapplication.extra.contacts;
+import com.example.dellgaming.myapplication.extra.faq;
+
 public class UserProfileOnline extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    boolean flag = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile_online);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        OnlineHomeFragment fragment = new OnlineHomeFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        Intent intent = getIntent();
+        String token = intent.getStringExtra("token");
+
+       final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                flag = true;
+                if(flag == true){
+                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_send_white_24dp));
+                    CHatFragment fragment = new CHatFragment();
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+                    transaction.replace(R.id.fragment_container, fragment);
+                    transaction.commit();
+
+                }
+
+//                else if(flag == false){
+//
+//                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.icon1));
+//                    flag = true;
+//
+//                }
+
+
+
+
+//                Snackbar.make(view, "Chat va qongiroq qilish funksiyasi", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+
             }
         });
 
@@ -81,16 +126,91 @@ public class UserProfileOnline extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+
+
+
+
+            omonat fragment = new omonat();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(android.R.anim.slide_in_left,
+                    android.R.anim.slide_out_right);
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
         } else if (id == R.id.nav_gallery) {
 
+            kredit fragment = new kredit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
         } else if (id == R.id.nav_slideshow) {
+            plastik fragment = new plastik();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
 
         } else if (id == R.id.nav_manage) {
+            otqizmalar fragment = new otqizmalar();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
+        } else if (id == R.id.nav_operation) {
+            valyutaOperatsiya fragment = new valyutaOperatsiya();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
 
         } else if (id == R.id.nav_share) {
+            contacts fragment = new contacts();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
 
         } else if (id == R.id.nav_send) {
+            branches_map fragment = new branches_map();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
+        } else if (id == R.id.nav_faq) {
+            faq fragment = new faq();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+
+        } else if (id == R.id.nav_settings) {
+//            Intent myIntent = new Intent(offline.this, SettingsActivity.class);
+//////            myIntent.putExtra("key", value); //Optional parameters
+//            offline.this.startActivity(myIntent);
+            Intent intent = new Intent(UserProfileOnline.this,
+                    SettingsActivity.class);
+            startActivity(intent);
+//            SettingsFragment fragment = new SettingsFragment();
+//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//            transaction.replace(R.id.fragment_container, fragment);
+//            transaction.commit();
+
+        } else if (id == R.id.nav_share_app) {
+            try {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                String sAux = "\nLet me recommend you this application\n\n";
+                sAux = sAux + "https:universalbank.uz\n\n";
+                i.putExtra(Intent.EXTRA_TEXT, sAux);
+                startActivity(Intent.createChooser(i, "choose one"));
+            } catch (Exception e) {
+                //e.toString();
+            }
+
+        } else if (id == R.id.nav_home) {
+            OnlineHomeFragment fragment = new OnlineHomeFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
 
         }
 

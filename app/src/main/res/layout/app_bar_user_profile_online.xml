@@ -11,12 +11,29 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+            <ImageButton
+                android:id="@+id/register"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:background="#00ffffff"
+                android:src="@drawable/ic_person_black_24dp" />
+        </RelativeLayout>
 
     </android.support.design.widget.AppBarLayout>
 
