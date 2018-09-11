@@ -139,11 +139,9 @@
 
                 <AutoCompleteTextView
                     android:id="@+id/expire_date"
-                    android:layout_width="116dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginBottom="@dimen/umumiy_padding"
-                    android:layout_marginRight="@dimen/umumiy_padding"
                     android:gravity="left"
                     android:hint="@string/prompt_expire_date"
                     android:inputType="date"
@@ -159,7 +157,7 @@
                 style="@style/MainRedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_margin="16dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
