@@ -6,8 +6,11 @@
 
     <item>
         <bitmap
+
             android:gravity="center"
-            android:src="@drawable/white"/>
+            android:src="@drawable/logo1"/>
+
     </item>
+
 
 </layer-list>

@@ -95,6 +95,7 @@
 
 
     <string name="prompt_card_number">Karta raqamini kiriting</string>
+    <string name="prompt_card_name">Karta nomini kiriting</string>
     <string name="prompt_expire_date">oy/yil</string>
     <string name="prompt_sms_pass">Parol</string>
     <string name="prompt_password">Password</string>
@@ -102,4 +103,18 @@
     <string name="action_sign_in_short">Sign in, short</string>
     <string name="error_field_required">Majburiy maydon</string>
     <string name="title_activity_user_profile_online">UserProfileOnline</string>
+
+    <!-- TODO: Credit card strings for open  -->
+    <string name="card_header">NFN CARD</string>
+    <string name="card_number_sample">XXXX XXXX XXXX XXXX</string>
+    <string name="card_validity_label">VALID UPTO</string>
+    <string name="card_validity_sample">MM/YY</string>
+    <string name="card_name_sample">CARD HOLDER</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="card_holders_name">Card Holder\'s Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_validity">Expires</string>
+    <string name="card_cvv">CVV/CVC Number</string>
 </resources>

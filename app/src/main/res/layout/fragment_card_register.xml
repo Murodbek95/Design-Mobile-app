@@ -6,69 +6,163 @@
     android:layout_gravity="center"
     tools:context=".register.fragment.CardRegister">
 
-
     <LinearLayout
-        android:id="@+id/email_login_form"
-        android:layout_width="344dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_gravity="center"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_credit_card_black_24dp"/>
-
-
-        <android.support.design.widget.TextInputLayout
+        <RelativeLayout
+            android:id="@+id/rl_card"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/card_height"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@drawable/ic_card_bg"
+            android:padding="@dimen/activity_horizontal_margin">
 
-            <AutoCompleteTextView
-                android:id="@+id/email"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin">
+
+
+                <ImageView
+                    android:layout_width="@dimen/chip_width"
+                    android:layout_height="@dimen/chip_height"
+                    android:layout_marginBottom="@dimen/items_inbetween"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_chip" />
+
+                <TextView
+                    android:id="@+id/tv_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/card_number_sample"
+                    android:textColor="@color/card_text_color"
+                    android:textSize="@dimen/header_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/items_inbetween_small"
+                        android:text="@string/card_validity_label"
+                        android:textColor="@color/card_text_color"
+                        android:textSize="@dimen/xsmall_text" />
+
+                    <TextView
+                        android:id="@+id/tv_validity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_validity_sample"
+                        android:textColor="@color/card_text_color"
+                        android:textSize="@dimen/xsmall_text" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_member_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/card_name_sample"
+                    android:textAllCaps="true"
+                    android:textColor="@color/card_text_color"
+                    android:textSize="@dimen/medium_text" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivType"
+                android:layout_width="@dimen/cardtype_width"
+                android:layout_height="@dimen/cardtype_height"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/items_inbetween_small"
+                android:layout_marginRight="@dimen/items_inbetween_small" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/elevation_effect"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/card_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_card_name"
+                    android:inputType="textCapSentences"
+                    android:lineSpacingMultiplier="4"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textIsSelectable="false" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_card_number"
+                    android:inputType="numberDecimal"
+                    android:lineSpacingMultiplier="4"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textIsSelectable="false" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/expire_date"
+                    android:layout_width="116dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/umumiy_padding"
+                    android:layout_marginRight="@dimen/umumiy_padding"
+                    android:gravity="left"
+                    android:hint="@string/prompt_expire_date"
+                    android:inputType="date"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/email_sign_in_button"
+                style="@style/MainRedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/umumiy_padding"
-                android:hint="@string/prompt_card_number"
-                android:inputType="numberDecimal"
-                android:lineSpacingMultiplier="4"
-                android:maxLength="16"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textIsSelectable="false" />
+                android:layout_marginTop="16dp"
+                android:text="@string/action_sign_in"
+                android:textStyle="bold" />
 
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <AutoCompleteTextView
-                android:id="@+id/expire_date"
-                android:layout_width="116dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginBottom="@dimen/umumiy_padding"
-                android:layout_marginRight="@dimen/umumiy_padding"
-                android:gravity="right"
-                android:hint="@string/prompt_expire_date"
-                android:inputType="date"
-                android:maxLength="4"
-                android:maxLines="1"
-                android:singleLine="true" />
-
-        </android.support.design.widget.TextInputLayout>
-
-
-        <Button
-            android:id="@+id/email_sign_in_button"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/action_sign_in"
-            android:textStyle="bold" />
-
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>
